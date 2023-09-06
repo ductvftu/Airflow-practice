@@ -5,7 +5,8 @@ A simple Aiflow dag
 ![Connection-fs1](https://github.com/ductvftu/Airflow-practice/assets/130732927/50357eaa-62d4-4eb2-8c4f-1c0c8f11da2e)
 ![Connection-Postgress_1](https://github.com/ductvftu/Airflow-practice/assets/130732927/05e86e24-f9aa-4c9d-b3f4-ed5e39b535ae)
 
-##Task flow
+##Task flow:
+
 ![Dag_1](https://github.com/ductvftu/Airflow-practice/assets/130732927/c24d4e04-eace-4a5d-b4f7-14a789db02b5)
 
 ##Output table
