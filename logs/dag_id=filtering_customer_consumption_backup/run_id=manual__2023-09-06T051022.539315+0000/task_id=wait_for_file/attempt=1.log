@@ -1,0 +1,26 @@
+[2023-09-06T05:10:26.734+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: filtering_customer_consumption_backup.wait_for_file manual__2023-09-06T05:10:22.539315+00:00 [queued]>
+[2023-09-06T05:10:26.758+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: filtering_customer_consumption_backup.wait_for_file manual__2023-09-06T05:10:22.539315+00:00 [queued]>
+[2023-09-06T05:10:26.759+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-06T05:10:26.760+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-09-06T05:10:26.761+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-06T05:10:26.794+0000] {taskinstance.py:1383} INFO - Executing <Task(FileSensor): wait_for_file> on 2023-09-06 05:10:22.539315+00:00
+[2023-09-06T05:10:26.804+0000] {standard_task_runner.py:55} INFO - Started process 344 to run task
+[2023-09-06T05:10:26.808+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'filtering_customer_consumption_backup', 'wait_for_file', 'manual__2023-09-06T05:10:22.539315+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/filtering_customer_consumption_backup.py', '--cfg-path', '/tmp/tmpryxiey96']
+[2023-09-06T05:10:26.811+0000] {standard_task_runner.py:83} INFO - Job 4: Subtask wait_for_file
+[2023-09-06T05:10:26.908+0000] {task_command.py:376} INFO - Running <TaskInstance: filtering_customer_consumption_backup.wait_for_file manual__2023-09-06T05:10:22.539315+00:00 [running]> on host 60d3bee26398
+[2023-09-06T05:10:27.025+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ductv50
+AIRFLOW_CTX_DAG_ID=filtering_customer_consumption_backup
+AIRFLOW_CTX_TASK_ID=wait_for_file
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-06T05:10:22.539315+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-06T05:10:22.539315+00:00
+[2023-09-06T05:10:27.047+0000] {base.py:71} INFO - Using connection ID 'fs1' for task execution.
+[2023-09-06T05:10:27.048+0000] {filesystem.py:58} INFO - Poking for file /opt/***/dags/resources/rawdata/consumption_yyyymmdd.csv
+[2023-09-06T05:10:27.063+0000] {filesystem.py:63} INFO - Found File /opt/***/dags/resources/rawdata/consumption_yyyymmdd.csv last modified: 20230828091440
+[2023-09-06T05:10:27.064+0000] {base.py:213} INFO - Success criteria met. Exiting.
+[2023-09-06T05:10:27.091+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=filtering_customer_consumption_backup, task_id=wait_for_file, execution_date=20230906T051022, start_date=20230906T051026, end_date=20230906T051027
+[2023-09-06T05:10:27.141+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-09-06T05:10:27.243+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

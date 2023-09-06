@@ -1,0 +1,36 @@
+[2023-09-06T04:33:22.794+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: filtering_customer_consumption_backup.wait_for_file manual__2023-09-06T04:33:14.919813+00:00 [queued]>
+[2023-09-06T04:33:22.821+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: filtering_customer_consumption_backup.wait_for_file manual__2023-09-06T04:33:14.919813+00:00 [queued]>
+[2023-09-06T04:33:22.822+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-06T04:33:22.825+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-09-06T04:33:22.827+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-06T04:33:22.869+0000] {taskinstance.py:1383} INFO - Executing <Task(FileSensor): wait_for_file> on 2023-09-06 04:33:14.919813+00:00
+[2023-09-06T04:33:22.885+0000] {standard_task_runner.py:55} INFO - Started process 258 to run task
+[2023-09-06T04:33:22.902+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'filtering_customer_consumption_backup', 'wait_for_file', 'manual__2023-09-06T04:33:14.919813+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/filtering_customer_consumption_backup.py', '--cfg-path', '/tmp/tmp00dud_nm']
+[2023-09-06T04:33:22.906+0000] {standard_task_runner.py:83} INFO - Job 3: Subtask wait_for_file
+[2023-09-06T04:33:23.084+0000] {task_command.py:376} INFO - Running <TaskInstance: filtering_customer_consumption_backup.wait_for_file manual__2023-09-06T04:33:14.919813+00:00 [running]> on host 60d3bee26398
+[2023-09-06T04:33:23.275+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ductv50
+AIRFLOW_CTX_DAG_ID=filtering_customer_consumption_backup
+AIRFLOW_CTX_TASK_ID=wait_for_file
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-06T04:33:14.919813+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-06T04:33:14.919813+00:00
+[2023-09-06T04:33:23.304+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 189, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/filesystem.py", line 55, in poke
+    hook = FSHook(self.fs_conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/filesystem.py", line 38, in __init__
+    conn = self.get_connection(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 70, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 432, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `fs1` isn't defined
+[2023-09-06T04:33:23.315+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=filtering_customer_consumption_backup, task_id=wait_for_file, execution_date=20230906T043314, start_date=20230906T043322, end_date=20230906T043323
+[2023-09-06T04:33:23.338+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3 for task wait_for_file (The conn_id `fs1` isn't defined; 258)
+[2023-09-06T04:33:23.390+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-09-06T04:33:23.485+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2023-09-06T05:14:39.334+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: filtering_customer_consumption_backup.Transform_data_and_insert manual__2023-09-06T05:14:24.102041+00:00 [queued]>
+[2023-09-06T05:14:39.354+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: filtering_customer_consumption_backup.Transform_data_and_insert manual__2023-09-06T05:14:24.102041+00:00 [queued]>
+[2023-09-06T05:14:39.355+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-06T05:14:39.356+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-09-06T05:14:39.357+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-06T05:14:39.384+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): Transform_data_and_insert> on 2023-09-06 05:14:24.102041+00:00
+[2023-09-06T05:14:39.399+0000] {standard_task_runner.py:55} INFO - Started process 501 to run task
+[2023-09-06T05:14:39.408+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'filtering_customer_consumption_backup', 'Transform_data_and_insert', 'manual__2023-09-06T05:14:24.102041+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/filtering_customer_consumption_backup.py', '--cfg-path', '/tmp/tmp61ik_tuq']
+[2023-09-06T05:14:39.412+0000] {standard_task_runner.py:83} INFO - Job 10: Subtask Transform_data_and_insert
+[2023-09-06T05:14:39.524+0000] {task_command.py:376} INFO - Running <TaskInstance: filtering_customer_consumption_backup.Transform_data_and_insert manual__2023-09-06T05:14:24.102041+00:00 [running]> on host 60d3bee26398
+[2023-09-06T05:14:39.705+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ductv50
+AIRFLOW_CTX_DAG_ID=filtering_customer_consumption_backup
+AIRFLOW_CTX_TASK_ID=Transform_data_and_insert
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-06T05:14:24.102041+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-06T05:14:24.102041+00:00
+[2023-09-06T05:14:40.024+0000] {base.py:71} INFO - Using connection ID 'Postgress_1' for task execution.
+[2023-09-06T05:14:40.193+0000] {base.py:71} INFO - Using connection ID 'Postgress_1' for task execution.
+[2023-09-06T05:14:40.315+0000] {base.py:71} INFO - Using connection ID 'Postgress_1' for task execution.
+[2023-09-06T05:14:40.534+0000] {python.py:177} INFO - Done. Returned value was: {'consumption_alcoholic_20230906': 2235, 'consumption_cereals_bakery_20230906': 1490, 'consumption_meats_poultry_20230906': 2980}
+[2023-09-06T05:14:40.629+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=filtering_customer_consumption_backup, task_id=Transform_data_and_insert, execution_date=20230906T051424, start_date=20230906T051439, end_date=20230906T051440
+[2023-09-06T05:14:40.710+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-09-06T05:14:40.765+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

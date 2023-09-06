@@ -1,0 +1,34 @@
+[2023-09-06T05:14:50.070+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: filtering_customer_consumption_backup.Dag_infomation manual__2023-09-06T05:14:24.102041+00:00 [queued]>
+[2023-09-06T05:14:50.181+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: filtering_customer_consumption_backup.Dag_infomation manual__2023-09-06T05:14:24.102041+00:00 [queued]>
+[2023-09-06T05:14:50.184+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-06T05:14:50.185+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-09-06T05:14:50.190+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-06T05:14:50.302+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): Dag_infomation> on 2023-09-06 05:14:24.102041+00:00
+[2023-09-06T05:14:50.357+0000] {standard_task_runner.py:55} INFO - Started process 516 to run task
+[2023-09-06T05:14:50.433+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'filtering_customer_consumption_backup', 'Dag_infomation', 'manual__2023-09-06T05:14:24.102041+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/filtering_customer_consumption_backup.py', '--cfg-path', '/tmp/tmpyfrnux0y']
+[2023-09-06T05:14:50.507+0000] {standard_task_runner.py:83} INFO - Job 12: Subtask Dag_infomation
+[2023-09-06T05:14:50.934+0000] {task_command.py:376} INFO - Running <TaskInstance: filtering_customer_consumption_backup.Dag_infomation manual__2023-09-06T05:14:24.102041+00:00 [running]> on host 60d3bee26398
+[2023-09-06T05:14:51.532+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ductv50
+AIRFLOW_CTX_DAG_ID=filtering_customer_consumption_backup
+AIRFLOW_CTX_TASK_ID=Dag_infomation
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-06T05:14:24.102041+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-06T05:14:24.102041+00:00
+[2023-09-06T05:14:51.606+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:297: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-09-06T05:14:51.607+0000] {logging_mixin.py:120} INFO - DAG Start Time: 2023-09-06T05:14:24.102041+00:00
+[2023-09-06T05:14:51.608+0000] {logging_mixin.py:120} INFO - DAG End Time: 2023-09-06 05:14:51.536077
+[2023-09-06T05:14:51.608+0000] {logging_mixin.py:120} INFO - Task check_rows executed with duration: 0.654148
+[2023-09-06T05:14:51.609+0000] {logging_mixin.py:120} INFO - Task wait_for_file executed with duration: 0.984566
+[2023-09-06T05:14:51.609+0000] {logging_mixin.py:120} INFO - Task create_table executed with duration: 0.457418
+[2023-09-06T05:14:51.610+0000] {logging_mixin.py:120} INFO - Task Transform_data_and_insert executed with duration: 1.292191
+[2023-09-06T05:14:51.613+0000] {logging_mixin.py:120} INFO - The task with the longest runtime is: Transform_data_and_insert with duration: 1.292191
+[2023-09-06T05:14:51.615+0000] {logging_mixin.py:120} INFO - The task with the shortest runtime is: create_table with duration: 0.457418
+[2023-09-06T05:14:51.616+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-09-06T05:14:51.651+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=filtering_customer_consumption_backup, task_id=Dag_infomation, execution_date=20230906T051424, start_date=20230906T051450, end_date=20230906T051451
+[2023-09-06T05:14:51.720+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-09-06T05:14:51.874+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
